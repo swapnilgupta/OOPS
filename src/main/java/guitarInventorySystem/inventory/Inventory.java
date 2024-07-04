@@ -21,18 +21,9 @@ public class Inventory {
 		List<Guitar> matchingGuitars = new ArrayList<>();
 		for (Guitar guitar : guitars) {
 			GuitarSpec guitarSpec = guitar.getSpec();
-			if(searchSpec.getBuilder() != guitarSpec.getBuilder())
-				continue;
-			String model = searchSpec.getModel().toLowerCase();
-			if(!model.isEmpty() && !model.equals(guitarSpec.getModel().toLowerCase()))
-				continue;
-			if(searchSpec.getType() != guitarSpec.getType())
-				continue;
-			if(searchSpec.getBackWood() != guitarSpec.getBackWood())
-				continue;
-			if(searchSpec.getTopWood() != guitarSpec.getTopWood())
-				continue;
-			matchingGuitars.add(guitar);
+			if(searchSpec.equals(guitarSpec)) {
+				matchingGuitars.add(guitar);
+			}
 		}
 		return matchingGuitars;
 	}

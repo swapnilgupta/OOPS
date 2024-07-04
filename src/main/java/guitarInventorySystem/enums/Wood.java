@@ -1,7 +1,7 @@
 package guitarInventorySystem.enums;
 
 public enum Wood {
-	INDIAN_ROSEWOOD, BRAZILIAN_ROSEWOOD, MAHOGANY, MAPLE, COCOBOLO, CEDAR, ADIRONDACK, ALDER, SITKA;
+	INDIAN_ROSEWOOD, BRAZILIAN_ROSEWOOD, MAHOGANY, MAPLE, COCOBOLO, CEDAR, ADIRONDACK, ALDER, SITKA, ROSEWOOD, SPRUCE;
 
 	@Override
 	public String toString() {
@@ -15,6 +15,8 @@ public enum Wood {
 			case ADIRONDACK -> "Adirondack";
 			case ALDER -> "Alder";
 			case SITKA -> "Sitka";
+			case ROSEWOOD -> "Rosewood";
+			case SPRUCE -> "Spruce";
 		};
 	}
 }

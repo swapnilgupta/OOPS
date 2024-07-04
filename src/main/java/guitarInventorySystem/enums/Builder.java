@@ -1,7 +1,7 @@
 package guitarInventorySystem.enums;
 
 public enum Builder {
-	FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY;
+	FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY, IBANEZ;
 
 	@Override
 	public String toString() {
@@ -13,6 +13,7 @@ public enum Builder {
 			case OLSON -> "Olson";
 			case RYAN -> "Ryan";
 			case PRS -> "PRS";
+			case IBANEZ -> "Ibanez";
 			default -> "Any";
 		};
 	}

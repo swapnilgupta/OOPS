@@ -15,8 +15,7 @@ public class FindGuitarTester {
 		Inventory inventory = new Inventory();
 		initializeInventory(inventory);
 
-		GuitarSpec whatErinLikes = new GuitarSpec(Builder.FENDER, "Stratocastor", Type.ELECTRIC,
-			Wood.ALDER, Wood.ALDER);
+		GuitarSpec whatErinLikes = new GuitarSpec(Builder.MARTIN, "D-12-28", Type.ACOUSTIC, Wood.ROSEWOOD, Wood.SPRUCE, 12);
 		List<Guitar> matchingGuitars = inventory.search(whatErinLikes);
 
 		if (!matchingGuitars.isEmpty()) {
@@ -69,5 +68,10 @@ public class FindGuitarTester {
 		inventory.addGuitar("6 29584", 2100.95,
 			new GuitarSpec(Builder.PRS, "Dave Navarro Signature", Type.ELECTRIC, Wood.MAHOGANY,
 				Wood.MAPLE));
+
+		inventory.addGuitar("12String001", 3200.95, new GuitarSpec(Builder.MARTIN, "D-12-28", Type.ACOUSTIC, Wood.ROSEWOOD, Wood.SPRUCE, 12));
+		inventory.addGuitar("7String001", 2500.95, new GuitarSpec(Builder.IBANEZ, "RG", Type.ELECTRIC, Wood.MAHOGANY, Wood.MAPLE, 12));
+		inventory.addGuitar("6StringClassic", 1500.95, new GuitarSpec(Builder.FENDER, "Telecaster", Type.ELECTRIC, Wood.ALDER, Wood.MAPLE, 12));
+
 	}
 }
